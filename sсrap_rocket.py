@@ -175,7 +175,7 @@ class MonomahScrapper(ParserFacade):
             return 'Not info'
 
 
-def result_hundler(results: list):
+def result_handler(results: list):
     for result in results:
         if result.get('error'):
             print('There is some error', result.get('message'))   
@@ -194,4 +194,4 @@ if __name__ == '__main__':
     monomax_scrap =  Scrapper(MonomahScrapper(url='https://monomax.by/map'), path='monomah.json')
     results.append(monomax_scrap.process())
 
-    result_hundler(results)
+    result_handler(results)
